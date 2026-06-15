@@ -1,0 +1,2 @@
+n_pairs,disrupted_mean_pct,recovery_mean_pct,mean_gain_pts,wilcoxon_W,p_value
+7,10.0,98.63,88.63,0.0,0.0156

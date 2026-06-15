@@ -1,0 +1,98 @@
+{
+  "dataset": {
+    "total_instances": 675,
+    "disrupted_instances_any_blank": 183,
+    "graded_instances": 301,
+    "unique_students": 206,
+    "exams": 7
+  },
+  "analysis1_recovery_PRIMARY": {
+    "n_pairs": 7,
+    "disrupted_mean_pct": 10.0,
+    "recovery_mean_pct": 98.63,
+    "mean_gain_pts": 88.63,
+    "wilcoxon_W": 0.0,
+    "p_value": 0.0156
+  },
+  "analysis2_prevalence": [
+    {
+      "exam": "Midterm1",
+      "n_students": 206,
+      "substantial_disruption": 3,
+      "complete_disconnection": 0,
+      "rate_pct": 1.5,
+      "ci95_low": 0.5,
+      "ci95_high": 4.2
+    },
+    {
+      "exam": "Midterm2_Theory",
+      "n_students": 58,
+      "substantial_disruption": 1,
+      "complete_disconnection": 0,
+      "rate_pct": 1.7,
+      "ci95_low": 0.3,
+      "ci95_high": 9.1
+    },
+    {
+      "exam": "Midterm2_Practical",
+      "n_students": 65,
+      "substantial_disruption": 22,
+      "complete_disconnection": 22,
+      "rate_pct": 33.8,
+      "ci95_low": 23.5,
+      "ci95_high": 46.0
+    },
+    {
+      "exam": "Final_Theory",
+      "n_students": 137,
+      "substantial_disruption": 6,
+      "complete_disconnection": 1,
+      "rate_pct": 4.4,
+      "ci95_low": 2.0,
+      "ci95_high": 9.2
+    },
+    {
+      "exam": "Final_Practical",
+      "n_students": 151,
+      "substantial_disruption": 21,
+      "complete_disconnection": 10,
+      "rate_pct": 13.9,
+      "ci95_low": 9.3,
+      "ci95_high": 20.3
+    },
+    {
+      "exam": "Supp_Theory",
+      "n_students": 29,
+      "substantial_disruption": 1,
+      "complete_disconnection": 0,
+      "rate_pct": 3.4,
+      "ci95_low": 0.6,
+      "ci95_high": 17.2
+    },
+    {
+      "exam": "Supp_Practical",
+      "n_students": 29,
+      "substantial_disruption": 10,
+      "complete_disconnection": 6,
+      "rate_pct": 34.5,
+      "ci95_low": 19.9,
+      "ci95_high": 52.7
+    }
+  ],
+  "analysis3_complete_disconnection": {
+    "complete_instances": 39,
+    "unique_students": 35,
+    "exams_spanned": 4,
+    "mean_duration_min_with_zero_answers": 70.0,
+    "median_duration_min": 70.0
+  },
+  "analysis4_crosssectional_SUPPORTING": {
+    "non_n": 210,
+    "non_mean": 90.99,
+    "dis_n": 47,
+    "dis_mean": 3.36,
+    "U": 0.0,
+    "p_value": 3.0099999999999997e-28,
+    "cohens_d": 7.66
+  }
+}
