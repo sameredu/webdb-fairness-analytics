@@ -1,0 +1,71 @@
+# ---------------------------------------------------------------------------
+# PRIVACY — NEVER COMMIT THESE
+# ---------------------------------------------------------------------------
+# The private re-identification mapping links pseudonymous student labels back
+# to real identities. Committing it would breach the ethics approval under which
+# this study was conducted (IUG Ethical Research Committee, No. 2026/29), which
+# was granted on the basis that all released data are de-identified.
+#
+# Note: git history is permanent. A file committed and later deleted REMAINS
+# recoverable from the history and must be purged with git-filter-repo or the
+# repository recreated.
+PRIVATE_ID_Mapping_DO_NOT_PUBLISH.xlsx
+*ID_Mapping*
+*id_mapping*
+*Mapping*
+*mapping*
+*DO_NOT_PUBLISH*
+*deident*
+*reident*
+*re-ident*
+*PRIVATE*
+*private*
+
+# ---------------------------------------------------------------------------
+# RAW DATASET
+# ---------------------------------------------------------------------------
+# The seven anonymized examination files are archived on Zenodo with a DOI
+# (10.5281/zenodo.20366538) and are not duplicated here. Zenodo is the citable,
+# archival home; GitHub is not. Keeping one canonical copy prevents the two from
+# drifting apart.
+#
+# The derived file results/instance_level_features.csv IS committed, so scripts
+# 02, 04 and 05 reproduce every reported analysis without the raw files. Only
+# script 01 (feature engineering) needs them.
+data/*.xlsx
+data/*.xls
+data/*.csv
+!data/README.md
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+.venv/
+ENV/
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# ---------------------------------------------------------------------------
+# OS and editor
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+.vscode/
+
+# ---------------------------------------------------------------------------
+# Temporary
+# ---------------------------------------------------------------------------
+*.log
+*.tmp
+~$*

@@ -1,0 +1,4 @@
+scope,chi2,df,p_value,rates_pct
+all_exams,3.36,4,0.4992,"{'Section_101': 13.0, 'Section_102': 9.0, 'Section_103': 7.2, 'Section_201': 8.2, 'Section_202': 9.2}"
+practical_only,6.98,4,0.1372,"{'Section_101': 33.3, 'Section_102': 15.7, 'Section_103': 19.0, 'Section_201': 16.4, 'Section_202': 21.6}"
+theory_only,5.0,4,0.2876,"{'Section_101': 1.0, 'Section_102': 5.4, 'Section_103': 1.2, 'Section_201': 3.3, 'Section_202': 1.6}"

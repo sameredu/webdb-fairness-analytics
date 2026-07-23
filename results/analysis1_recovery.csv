@@ -1,2 +1,2 @@
-n_pairs,disrupted_mean_pct,recovery_mean_pct,mean_gain_pts,wilcoxon_W,p_value
-7,10.0,98.63,88.63,0.0,0.0156
+n_pairs,disrupted_mean_pct,disrupted_median_pct,recovery_mean_pct,recovery_median_pct,mean_gain_pts,wilcoxon_W,p_value,p_value_floor_at_this_n,rank_biserial_r,hodges_lehmann_shift_pts,boot_ci95_low_pts,boot_ci95_high_pts,bootstrap_replicates,seed
+7,10.0,0.0,98.63,100.0,88.63,0.0,0.0156,0.0156,1.0,88.8,78.0,97.1,10000,42

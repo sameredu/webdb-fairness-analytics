@@ -1,98 +1,297 @@
 {
-  "dataset": {
-    "total_instances": 675,
-    "disrupted_instances_any_blank": 183,
-    "graded_instances": 301,
-    "unique_students": 206,
-    "exams": 7
+ "code_version": "2.0.0",
+ "note": "Supersedes v1.0.0. The cross-sectional contrast and Cohen's d reported in v1.0.0 were withdrawn; see CHANGELOG.md.",
+ "dataset": {
+  "total_instances": 675,
+  "unique_students": 226,
+  "sections": 5,
+  "exams": 7,
+  "graded_instances": 301,
+  "instances_with_any_blank": 183,
+  "instances_substantial_disruption": 64
+ },
+ "analysis0_assumption_checks": [
+  {
+   "distribution": "disrupted_scores",
+   "n": 7,
+   "shapiro_W": 0.7604,
+   "p_value": 0.0163,
+   "normality_rejected": true
   },
-  "analysis1_recovery_PRIMARY": {
-    "n_pairs": 7,
-    "disrupted_mean_pct": 10.0,
-    "recovery_mean_pct": 98.63,
-    "mean_gain_pts": 88.63,
-    "wilcoxon_W": 0.0,
-    "p_value": 0.0156
+  {
+   "distribution": "recovery_scores",
+   "n": 7,
+   "shapiro_W": 0.6004,
+   "p_value": 0.000275,
+   "normality_rejected": true
   },
-  "analysis2_prevalence": [
-    {
-      "exam": "Midterm1",
-      "n_students": 206,
-      "substantial_disruption": 3,
-      "complete_disconnection": 0,
-      "rate_pct": 1.5,
-      "ci95_low": 0.5,
-      "ci95_high": 4.2
-    },
-    {
-      "exam": "Midterm2_Theory",
-      "n_students": 58,
-      "substantial_disruption": 1,
-      "complete_disconnection": 0,
-      "rate_pct": 1.7,
-      "ci95_low": 0.3,
-      "ci95_high": 9.1
-    },
-    {
-      "exam": "Midterm2_Practical",
-      "n_students": 65,
-      "substantial_disruption": 22,
-      "complete_disconnection": 22,
-      "rate_pct": 33.8,
-      "ci95_low": 23.5,
-      "ci95_high": 46.0
-    },
-    {
-      "exam": "Final_Theory",
-      "n_students": 137,
-      "substantial_disruption": 6,
-      "complete_disconnection": 1,
-      "rate_pct": 4.4,
-      "ci95_low": 2.0,
-      "ci95_high": 9.2
-    },
-    {
-      "exam": "Final_Practical",
-      "n_students": 151,
-      "substantial_disruption": 21,
-      "complete_disconnection": 10,
-      "rate_pct": 13.9,
-      "ci95_low": 9.3,
-      "ci95_high": 20.3
-    },
-    {
-      "exam": "Supp_Theory",
-      "n_students": 29,
-      "substantial_disruption": 1,
-      "complete_disconnection": 0,
-      "rate_pct": 3.4,
-      "ci95_low": 0.6,
-      "ci95_high": 17.2
-    },
-    {
-      "exam": "Supp_Practical",
-      "n_students": 29,
-      "substantial_disruption": 10,
-      "complete_disconnection": 6,
-      "rate_pct": 34.5,
-      "ci95_low": 19.9,
-      "ci95_high": 52.7
-    }
-  ],
-  "analysis3_complete_disconnection": {
-    "complete_instances": 39,
-    "unique_students": 35,
-    "exams_spanned": 4,
-    "mean_duration_min_with_zero_answers": 70.0,
-    "median_duration_min": 70.0
+  {
+   "distribution": "paired_differences",
+   "n": 7,
+   "shapiro_W": 0.7763,
+   "p_value": 0.0237,
+   "normality_rejected": true
   },
-  "analysis4_crosssectional_SUPPORTING": {
-    "non_n": 210,
-    "non_mean": 90.99,
-    "dis_n": 47,
-    "dis_mean": 3.36,
-    "U": 0.0,
-    "p_value": 3.0099999999999997e-28,
-    "cohens_d": 7.66
+  {
+   "distribution": "non_disrupted_instances",
+   "n": 210,
+   "shapiro_W": 0.768,
+   "p_value": 6.52e-17,
+   "normality_rejected": true
+  },
+  {
+   "distribution": "disrupted_instances",
+   "n": 47,
+   "shapiro_W": 0.4614,
+   "p_value": 6.69e-12,
+   "normality_rejected": true
   }
+ ],
+ "analysis1_recovery": {
+  "n_pairs": 7,
+  "disrupted_mean_pct": 10.0,
+  "disrupted_median_pct": 0.0,
+  "recovery_mean_pct": 98.63,
+  "recovery_median_pct": 100.0,
+  "mean_gain_pts": 88.63,
+  "wilcoxon_W": 0.0,
+  "p_value": 0.0156,
+  "p_value_floor_at_this_n": 0.0156,
+  "rank_biserial_r": 1.0,
+  "hodges_lehmann_shift_pts": 88.8,
+  "boot_ci95_low_pts": 78.0,
+  "boot_ci95_high_pts": 97.1,
+  "bootstrap_replicates": 10000,
+  "seed": 42
+ },
+ "analysis2_prevalence": [
+  {
+   "exam": "Midterm1",
+   "n_students": 206,
+   "substantial_disruption": 3,
+   "complete_disconnection": 0,
+   "rate_pct": 1.5,
+   "ci95_low": 0.5,
+   "ci95_high": 4.2
+  },
+  {
+   "exam": "Midterm2_Theory",
+   "n_students": 58,
+   "substantial_disruption": 1,
+   "complete_disconnection": 0,
+   "rate_pct": 1.7,
+   "ci95_low": 0.3,
+   "ci95_high": 9.1
+  },
+  {
+   "exam": "Midterm2_Practical",
+   "n_students": 65,
+   "substantial_disruption": 22,
+   "complete_disconnection": 22,
+   "rate_pct": 33.8,
+   "ci95_low": 23.5,
+   "ci95_high": 46.0
+  },
+  {
+   "exam": "Final_Theory",
+   "n_students": 137,
+   "substantial_disruption": 6,
+   "complete_disconnection": 1,
+   "rate_pct": 4.4,
+   "ci95_low": 2.0,
+   "ci95_high": 9.2
+  },
+  {
+   "exam": "Final_Practical",
+   "n_students": 151,
+   "substantial_disruption": 21,
+   "complete_disconnection": 10,
+   "rate_pct": 13.9,
+   "ci95_low": 9.3,
+   "ci95_high": 20.3
+  },
+  {
+   "exam": "Supp_Theory",
+   "n_students": 29,
+   "substantial_disruption": 1,
+   "complete_disconnection": 0,
+   "rate_pct": 3.4,
+   "ci95_low": 0.6,
+   "ci95_high": 17.2
+  },
+  {
+   "exam": "Supp_Practical",
+   "n_students": 29,
+   "substantial_disruption": 10,
+   "complete_disconnection": 6,
+   "rate_pct": 34.5,
+   "ci95_low": 19.9,
+   "ci95_high": 52.7
+  }
+ ],
+ "analysis3_complete_disconnection": {
+  "complete_instances": 39,
+  "unique_students": 35,
+  "exams_spanned": 4,
+  "mean_duration_min_with_zero_answers": 70.0,
+  "median_duration_min": 70.0,
+  "min_duration_min": 0.3,
+  "max_duration_min": 99.0,
+  "instances_over_30_min": 35
+ },
+ "analysis4_trajectory": [
+  {
+   "student": "Student_AM",
+   "n_prior_unimpeded": 0,
+   "prior_pct": NaN,
+   "disrupted_pct": 20.0,
+   "recovery_pct": 95.2
+  },
+  {
+   "student": "Student_CU",
+   "n_prior_unimpeded": 1,
+   "prior_pct": 66.68,
+   "disrupted_pct": 0.0,
+   "recovery_pct": 100.0
+  },
+  {
+   "student": "Student_DF",
+   "n_prior_unimpeded": 0,
+   "prior_pct": NaN,
+   "disrupted_pct": 0.0,
+   "recovery_pct": 100.0
+  },
+  {
+   "student": "Student_EH",
+   "n_prior_unimpeded": 1,
+   "prior_pct": 86.66666666666667,
+   "disrupted_pct": 20.0,
+   "recovery_pct": 100.0
+  },
+  {
+   "student": "Student_GO",
+   "n_prior_unimpeded": 1,
+   "prior_pct": 55.56,
+   "disrupted_pct": 30.0,
+   "recovery_pct": 95.2
+  },
+  {
+   "student": "Student_HD",
+   "n_prior_unimpeded": 1,
+   "prior_pct": 86.66666666666667,
+   "disrupted_pct": 0.0,
+   "recovery_pct": 100.0
+  },
+  {
+   "student": "Student_Z",
+   "n_prior_unimpeded": 1,
+   "prior_pct": 93.33333333333331,
+   "disrupted_pct": 0.0,
+   "recovery_pct": 100.0
+  }
+ ],
+ "analysis5_threshold_sensitivity": [
+  {
+   "threshold": 0.3,
+   "flagged_instances": 79,
+   "prevalence_pct": 11.7,
+   "n_pairs": 7,
+   "wilcoxon_W": 0.0,
+   "p_value": 0.0156,
+   "mean_gain_pts": 88.6
+  },
+  {
+   "threshold": 0.4,
+   "flagged_instances": 70,
+   "prevalence_pct": 10.4,
+   "n_pairs": 7,
+   "wilcoxon_W": 0.0,
+   "p_value": 0.0156,
+   "mean_gain_pts": 88.6
+  },
+  {
+   "threshold": 0.5,
+   "flagged_instances": 64,
+   "prevalence_pct": 9.5,
+   "n_pairs": 7,
+   "wilcoxon_W": 0.0,
+   "p_value": 0.0156,
+   "mean_gain_pts": 88.6
+  },
+  {
+   "threshold": 0.6,
+   "flagged_instances": 59,
+   "prevalence_pct": 8.7,
+   "n_pairs": 7,
+   "wilcoxon_W": 0.0,
+   "p_value": 0.0156,
+   "mean_gain_pts": 88.6
+  },
+  {
+   "threshold": 0.7,
+   "flagged_instances": 54,
+   "prevalence_pct": 8.0,
+   "n_pairs": 7,
+   "wilcoxon_W": 0.0,
+   "p_value": 0.0156,
+   "mean_gain_pts": 88.6
+  },
+  {
+   "threshold": 0.8,
+   "flagged_instances": 50,
+   "prevalence_pct": 7.4,
+   "n_pairs": 6,
+   "wilcoxon_W": 0.0,
+   "p_value": 0.0312,
+   "mean_gain_pts": 92.5
+  },
+  {
+   "threshold": 1.0,
+   "flagged_instances": 39,
+   "prevalence_pct": 5.8,
+   "n_pairs": 4,
+   "wilcoxon_W": 0.0,
+   "p_value": 0.125,
+   "mean_gain_pts": 100.0
+  }
+ ],
+ "analysis6_section_robustness": [
+  {
+   "scope": "all_exams",
+   "chi2": 3.36,
+   "df": 4,
+   "p_value": 0.4992,
+   "rates_pct": "{'Section_101': 13.0, 'Section_102': 9.0, 'Section_103': 7.2, 'Section_201': 8.2, 'Section_202': 9.2}"
+  },
+  {
+   "scope": "practical_only",
+   "chi2": 6.98,
+   "df": 4,
+   "p_value": 0.1372,
+   "rates_pct": "{'Section_101': 33.3, 'Section_102': 15.7, 'Section_103': 19.0, 'Section_201': 16.4, 'Section_202': 21.6}"
+  },
+  {
+   "scope": "theory_only",
+   "chi2": 5.0,
+   "df": 4,
+   "p_value": 0.2876,
+   "rates_pct": "{'Section_101': 1.0, 'Section_102': 5.4, 'Section_103': 1.2, 'Section_201': 3.3, 'Section_202': 1.6}"
+  }
+ ],
+ "analysis7_supplementary_structure": {
+  "supplementary_students": 33,
+  "total_students": 226,
+  "share_of_cohort_pct": 14.6,
+  "share_of_final_theory_cohort_pct": 3.6,
+  "share_of_final_practical_cohort_pct": 8.6,
+  "absent_from_both_finals": 17,
+  "section_chi2": 5.69,
+  "section_df": 4,
+  "section_p_value": 0.2238
+ },
+ "analysis8_route_overlap": {
+  "final_instances_of_supplementary_students": 18,
+  "with_substantial_signature": 10,
+  "with_no_signature_at_all": 6
+ }
 }

@@ -1,2 +1,2 @@
-complete_instances,unique_students,exams_spanned,mean_duration_min_with_zero_answers,median_duration_min
-39,35,4,70.0,70.0
+complete_instances,unique_students,exams_spanned,mean_duration_min_with_zero_answers,median_duration_min,min_duration_min,max_duration_min,instances_over_30_min
+39,35,4,70.0,70.0,0.3,99.0,35

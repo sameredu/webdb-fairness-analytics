@@ -1,0 +1,8 @@
+student,n_prior_unimpeded,prior_pct,disrupted_pct,recovery_pct
+Student_AM,0,,20.0,95.2
+Student_CU,1,66.68,0.0,100.0
+Student_DF,0,,0.0,100.0
+Student_EH,1,86.66666666666667,20.0,100.0
+Student_GO,1,55.56,30.0,95.2
+Student_HD,1,86.66666666666667,0.0,100.0
+Student_Z,1,93.33333333333331,0.0,100.0

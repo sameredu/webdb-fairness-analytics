@@ -1,0 +1,6 @@
+distribution,n,shapiro_W,p_value,normality_rejected
+disrupted_scores,7,0.7604,0.0163,True
+recovery_scores,7,0.6004,0.000275,True
+paired_differences,7,0.7763,0.0237,True
+non_disrupted_instances,210,0.768,6.52e-17,True
+disrupted_instances,47,0.4614,6.69e-12,True
