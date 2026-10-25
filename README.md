@@ -103,6 +103,7 @@ webdb-fairness-analytics/
 │   └── Fig3_complete_disconnection.png
 ├── data/                            # (download dataset from Zenodo — see data/README.md)
 ├── CHANGELOG.md
+├── CITATION.cff
 ├── requirements.txt
 ├── LICENSE
 └── README.md
@@ -118,7 +119,7 @@ cd webdb-fairness-analytics
 pip install -r requirements.txt
 
 # Download the 7 anonymized .xlsx files from Zenodo into ./data
-#   https://doi.org/10.5281/zenodo.20366538
+#   https://doi.org/10.5281/zenodo.23643942
 export WEBDB_DATA="$(pwd)/data"
 
 python scripts/01_feature_engineering.py     # builds results/instance_level_features.csv
@@ -172,9 +173,9 @@ The analysis runs on the anonymized Moodle examination logs released on Zenodo u
 The dataset covers 226 students, five sections and seven assessments, for a total of 675
 (student, examination) instances, of which 301 carry a numeric grade.
 
-The `data/` directory in this repository is intentionally empty to avoid duplicating the
-archived release. Download the eight files from Zenodo and place the seven `.xlsx` files in
-`data/` before running the pipeline:
+The `data/` directory in this repository holds only a short README; the data files
+themselves are not duplicated here. Download the eight files from Zenodo and place the
+seven `.xlsx` files in `data/` before running the pipeline:
 
 | File | Assessment |
 |------|-----------|
@@ -188,6 +189,8 @@ archived release. Download the eight files from Zenodo and place the seven `.xls
 
 Version 1.0.0 of the dataset record carries the same seven data files; version 1.1.0 corrects
 the accompanying documentation only.
+
+---
 
 ## Citation
 
@@ -236,7 +239,6 @@ Please cite the article. If the code or the data are central to your work, cite 
 ```
 
 Results produced by version 1.0.0 of this software are superseded and should not be cited.
-```
 
 ---
 
