@@ -1,33 +1,67 @@
 cff-version: 1.2.0
-message: "If you use this software or dataset, please cite as below."
+message: "If you use this software, please cite both the software and the published article below."
 title: "webdb-fairness-analytics: Detecting Infrastructure-Induced Examination Inequality from Moodle Logs"
-version: "2.0.0"
+abstract: >-
+  Analysis pipeline for identifying internet-induced examination disruption in
+  Moodle-based e-examinations from standard gradebook exports, using a
+  severity-graded blank-ratio definition and a three-point within-subject
+  validation design. Accompanies the published article in Discover Education.
+type: software
+version: 2.0.0
 date-released: "2026-07-23"
 license: MIT
+doi: 10.5281/zenodo.21505628
 repository-code: "https://github.com/sameredu/webdb-fairness-analytics"
 authors:
-  - family-names: "Yaghi"
-    given-names: "Samer"
-    affiliation: "University College of Applied Sciences (UCAS), Gaza, Palestine"
+  - family-names: Yaghi
+    given-names: Samer
     orcid: "https://orcid.org/0009-0001-0268-7163"
-  - family-names: "AbuSamra"
-    given-names: "Aiman Ahmed"
-    affiliation: "Islamic University of Gaza (IUG), Palestine"
+    affiliation: "University College of Applied Sciences (UCAS), Gaza, Palestine"
+    email: syaghi@ucas.edu.ps
+  - family-names: AbuSamra
+    given-names: Aiman Ahmed
     orcid: "https://orcid.org/0000-0003-4652-3993"
+    affiliation: "Department of Computer Engineering, Islamic University of Gaza (IUG), Gaza, Palestine"
 keywords:
-  - "learning analytics"
-  - "educational fairness"
-  - "e-examinations"
-  - "digital inequality"
-  - "developing countries"
-  - "infrastructure-constrained education"
+  - learning analytics
+  - educational fairness
+  - e-examinations
+  - digital inequality
+  - Moodle
+  - reproducible research
+preferred-citation:
+  type: article
+  title: "Fairness aware learning analytics for identifying internet induced inequality in online examinations"
+  authors:
+    - family-names: Yaghi
+      given-names: Samer
+      orcid: "https://orcid.org/0009-0001-0268-7163"
+      affiliation: "University College of Applied Sciences (UCAS), Gaza, Palestine"
+    - family-names: AbuSamra
+      given-names: Aiman Ahmed
+      orcid: "https://orcid.org/0000-0003-4652-3993"
+      affiliation: "Department of Computer Engineering, Islamic University of Gaza (IUG), Gaza, Palestine"
+  journal: "Discover Education"
+  publisher:
+    name: "Springer Nature"
+  year: 2026
+  month: 9
+  volume: 5
+  number: 1009
+  doi: "10.1007/s44217-026-02182-6"
+  url: "https://doi.org/10.1007/s44217-026-02182-6"
+  license: CC-BY-4.0
 references:
   - type: data
     title: "Web Databases — Anonymized Moodle Examination Dataset for Fairness-Aware Learning Analytics"
     authors:
-      - family-names: "Yaghi"
-        given-names: "Samer"
-      - family-names: "AbuSamra"
-        given-names: "Aiman Ahmed"
-    doi: "10.5281/zenodo.20366538"
+      - family-names: Yaghi
+        given-names: Samer
+      - family-names: AbuSamra
+        given-names: Aiman Ahmed
     year: 2026
+    version: "1.1.0"
+    publisher:
+      name: Zenodo
+    doi: "10.5281/zenodo.23643942"
+    license: CC-BY-4.0
