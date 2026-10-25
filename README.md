@@ -1,4 +1,8 @@
 # webdb-fairness-analytics
+Analysis code accompanying the open-access article published in *Discover Education*:
+Yaghi S, AbuSamra AA. **Fairness aware learning analytics for identifying internet induced
+inequality in online examinations.** *Discover Education*. 2026;5:1009.
+<https://doi.org/10.1007/s44217-026-02182-6>
 
 ## Detecting Infrastructure-Induced Examination Inequality from Moodle Logs
 
@@ -7,9 +11,11 @@ distinguishes **infrastructure-induced examination failure** from genuine
 academic underperformance, using real Moodle examination logs from a
 connectivity-constrained higher-education setting.
 
-[![License: MIT](https://img.shields.io/badge/Code-MIT-green.svg)](LICENSE)
-[![Dataset: CC BY 4.0](https://img.shields.io/badge/Dataset-CC%20BY%204.0-orange.svg)](https://doi.org/10.5281/zenodo.20366538)
-[![Dataset DOI](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20366538-blue)](https://doi.org/10.5281/zenodo.20366538)
+[![Article DOI](https://img.shields.io/badge/Article-10.1007%2Fs44217--026--02182--6-B31B1B)](https://doi.org/10.1007/s44217-026-02182-6)
+[![Software DOI](https://img.shields.io/badge/Software-10.5281%2Fzenodo.21505628-1682D4)](https://doi.org/10.5281/zenodo.21505628)
+[![Dataset DOI](https://img.shields.io/badge/Dataset-10.5281%2Fzenodo.23643942-1682D4)](https://doi.org/10.5281/zenodo.23643942)
+[![License: MIT](https://img.shields.io/badge/Code-MIT-green)](LICENSE)
+[![Dataset License: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-green)](https://creativecommons.org/licenses/by/4.0/)
 
 > **Version 2.0.0** supersedes v1.0.0. Two analyses present in v1.0.0 were
 > withdrawn and six were added, following journal peer review. See
@@ -157,33 +163,79 @@ data reaches them before, not after, running the pipeline.
 
 ## Dataset
 
-The seven anonymized Moodle examination files (226 students across five sections,
-Web Databases course, 7 assessments, 675 examination instances) are openly
-available on Zenodo under CC BY 4.0:
+The analysis runs on the anonymized Moodle examination logs released on Zenodo under CC BY 4.0:
 
-**DOI:** [10.5281/zenodo.20366538](https://doi.org/10.5281/zenodo.20366538)
+> Yaghi S, AbuSamra AA. *Web Databases — Anonymized Moodle Examination Dataset for
+> Fairness-Aware Learning Analytics* [Data set]. Zenodo. 2026. Version 1.1.0.
+> <https://doi.org/10.5281/zenodo.23643942>
 
-Anonymization: sequential student labels, SHA-256 pseudonymized IDs, emails
-removed, k-anonymity k ≥ 5. The private re-identification mapping is **not**
-released and is excluded via `.gitignore`.
+The dataset covers 226 students, five sections and seven assessments, for a total of 675
+(student, examination) instances, of which 301 carry a numeric grade.
 
----
+The `data/` directory in this repository is intentionally empty to avoid duplicating the
+archived release. Download the eight files from Zenodo and place the seven `.xlsx` files in
+`data/` before running the pipeline:
+
+| File | Assessment |
+|------|-----------|
+| `DataBase_WEB_Midterm1_Anonymized.xlsx` | Midterm 1 — Theory |
+| `DataBase_WEB_Midterm2_Theory_Anonymized.xlsx` | Midterm 2 — Theory |
+| `DataBase_WEB_Midterm2_Practical_Anonymized.xlsx` | Midterm 2 — Practical |
+| `DataBase_WEB_Final_Theory_Anonymized.xlsx` | Final — Theory |
+| `DataBase_WEB_Final_Practical_Anonymized.xlsx` | Final — Practical |
+| `DataBase_WEB_Supp_Theory_Anonymized.xlsx` | Supplementary — Theory |
+| `DataBase_WEB_Supp_Practical_Anonymized.xlsx` | Supplementary — Practical |
+
+Version 1.0.0 of the dataset record carries the same seven data files; version 1.1.0 corrects
+the accompanying documentation only.
 
 ## Citation
 
-If you use this code or dataset, please cite the dataset and the companion
-article (journal reference will be updated upon publication):
+Please cite the article. If the code or the data are central to your work, cite them as well.
+
+**Article**
 
 ```bibtex
-@dataset{yaghi_2026_webdb,
+@article{yaghi2026fairness,
+  author  = {Yaghi, Samer and AbuSamra, Aiman Ahmed},
+  title   = {Fairness aware learning analytics for identifying internet induced inequality in online examinations},
+  journal = {Discover Education},
+  year    = {2026},
+  volume  = {5},
+  number  = {1009},
+  doi     = {10.1007/s44217-026-02182-6},
+  url     = {https://doi.org/10.1007/s44217-026-02182-6}
+}
+```
+
+**Software**
+
+```bibtex
+@software{yaghi2026webdb,
   author    = {Yaghi, Samer and AbuSamra, Aiman Ahmed},
-  title     = {{Web Databases — Anonymized Moodle Examination Dataset
-               for Fairness-Aware Learning Analytics}},
+  title     = {webdb-fairness-analytics: Detecting Infrastructure-Induced Examination Inequality from Moodle Logs},
+  version   = {2.0.0},
   year      = {2026},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.20366538},
-  url       = {https://doi.org/10.5281/zenodo.20366538}
+  doi       = {10.5281/zenodo.21505628},
+  url       = {https://github.com/sameredu/webdb-fairness-analytics}
 }
+```
+
+**Dataset**
+
+```bibtex
+@dataset{yaghi2026dataset,
+  author    = {Yaghi, Samer and AbuSamra, Aiman Ahmed},
+  title     = {Web Databases --- Anonymized Moodle Examination Dataset for Fairness-Aware Learning Analytics},
+  version   = {1.1.0},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23643942}
+}
+```
+
+Results produced by version 1.0.0 of this software are superseded and should not be cited.
 ```
 
 ---
